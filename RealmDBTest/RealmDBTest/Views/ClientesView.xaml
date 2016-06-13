@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealmDBTest.Views.ClientesView">
+
+  <StackLayout Padding="20">
+
+    <ListView VerticalOptions="FillAndExpand" ItemsSource="{Binding Clientes}"  SelectedItem="{Binding SelectedClientItem, Mode=TwoWay}" RowHeight="100">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Padding="10">
+              <Label Text="{Binding Nombre}" FontSize="18"></Label>
+              <Label Text="{Binding Telefono}" FontSize="14"></Label>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+    
+    
+  </StackLayout>
+  
+</ContentPage>
