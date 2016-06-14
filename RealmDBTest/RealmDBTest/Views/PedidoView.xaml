@@ -5,17 +5,17 @@
   
 
   <StackLayout Padding="20">
+    <Label Text="{Binding Pedido.ID}" FontSize="14"></Label>
     <Label Text="{Binding Pedido.Cliente.Nombre}" FontSize="14"></Label>
-
-
+    
     <ListView VerticalOptions="FillAndExpand" ItemsSource="{Binding LineasPedido}" RowHeight="50">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
             <StackLayout Orientation="Horizontal" Padding="5">
               <Label HorizontalOptions="StartAndExpand" Text="{Binding Descripcion}" FontSize="12"></Label>
-              <Label HorizontalOptions="End" Text="{Binding Unidades}" FontSize="12"></Label>
-              <Label HorizontalOptions="EndAndExpand" Text="{Binding Importe}" FontSize="12"></Label>
+              <Label HorizontalOptions="End" WidthRequest="50" Text="{Binding Unidades}" FontSize="12"></Label>
+              <Label HorizontalOptions="End" WidthRequest="50" Text="{Binding Importe, StringFormat='{0:C2}'}" FontSize="12"></Label>
             </StackLayout>
           </ViewCell>
         </DataTemplate>

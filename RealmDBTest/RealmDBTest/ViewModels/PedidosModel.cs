@@ -31,8 +31,11 @@ namespace RealmDBTest.ViewModels
             }
         }
 
+        public Cliente Cliente { get; set; }
+
         public PedidosModel(Cliente cliente)
         {
+            Cliente = cliente;
             _pedidos = new ObservableCollection<Pedido>(App.RealmDB.GetPedidosCliente(cliente));
         }
     }

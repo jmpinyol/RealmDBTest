@@ -5,13 +5,16 @@
 
   <StackLayout Padding="20">
 
+    <Label Text="Pedidos" FontSize="21"></Label>
+    <Label Text="{Binding Cliente.Nombre}" FontSize="14"></Label>
+    
     <ListView VerticalOptions="FillAndExpand" ItemsSource="{Binding Pedidos}"   SelectedItem="{Binding SelectedPedidoItem, Mode=TwoWay}" RowHeight="100">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell>
             <StackLayout Padding="10">
-              <Label Text="{Binding Fecha}" FontSize="18"></Label>
-              <Label Text="{Binding Total}" FontSize="14"></Label>
+              <Label Text="{Binding Fecha, StringFormat='{0:dd/MM/yyyy}'}" FontSize="18"></Label>
+              <Label Text="{Binding Total, StringFormat='Total: {0:C2}'}" FontSize="14"></Label>
             </StackLayout>
           </ViewCell>
         </DataTemplate>

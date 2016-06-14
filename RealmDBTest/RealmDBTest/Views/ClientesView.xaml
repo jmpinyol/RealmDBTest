@@ -5,6 +5,8 @@
 
   <StackLayout Padding="20">
 
+    <Label Text="Clientes" FontSize="21"></Label>
+    
     <ListView VerticalOptions="FillAndExpand" ItemsSource="{Binding Clientes}"  SelectedItem="{Binding SelectedClientItem, Mode=TwoWay}" RowHeight="100">
       <ListView.ItemTemplate>
         <DataTemplate>
